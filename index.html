@@ -8,7 +8,8 @@
 <body>
     <h1>How To Deploy a Static Website on GitHub</h1>
     <p>
-      <ol>
+        <h2>Initial Deployment</h2>
+        <ol>
           <li>Install git on my computer</li>
           <li>Create a new repository as public and check the optional "Add README" so that we start with one file as an indicator</li>
           <li>Press green Code button then copy the URL (http as default)</li>
@@ -18,12 +19,26 @@
           <li><code>git status</code> to check, see new file index.html and main branch</li>
           <li><code>git add .</code></li>
           <li><code>git commit -m "Initial commit"</code></li>
+          <li><code>git remote -v</code> to check the name of the remote repository</li>
+          <li><code>git branch</code> to check the name of local git branch</li>
           <li><code>git push origin main</code> Now see new file index.html in the Github superjinjia repo</li>
-          <li>Click on Settings on top right corner, then scroll down to see the section GitHub Pages</li>
-          <li>See Source sub-section, press the pulldown menu with initial value None, change it to 'main', which is the branch to use</li>
+          <li>Click on Settings on the top right corner, click on Pages on the left pane. Click
+              <a href="img/github_pages_settings.png">HERE</a> to see the screenshot
+          </li>
+          <li>See Source sub-section, press the pulldown menu with initial value None, change it to 'main', which is the default branch to deploy</li>
           <li>Keep the code as root, press the Save button</li>
           <li>Now under GitHub Pages we should see a URL for our project deployed at Github</li>
-      </ol>  
+        </ol>
+    </p>
+    <h2>About Updates</h2>
+        <ul>
+            <li><b>Update in Current Branch:</b>Just modify, add or delete files, then do <code>git add, git commit</code> and <code>git push</code>,<br>
+                the website at github is updated with the newly pushed code</li>
+            <li><b>Create a New Branch Then Push To Github:</b>Will see new branch in github in addition to previous branches,<br>
+                need to select the new branch for deployment in the Github Pages of the github repository.<br>
+                See <a href="https://www.youtube.com/watch?v=QyFcl_Fba-k">https://www.youtube.com/watch?v=QyFcl_Fba-k</a> for details.
+            </li>
+        </ul>
     </p>
 </body>
 </html>

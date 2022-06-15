@@ -10,7 +10,7 @@
     <p>
         <h2>Initial Deployment</h2>
         <ol>
-          <li>Install git on my computer</li>
+          <li>Install git on my computer  (Need to do this only once, type git to check if it already exists)/li>
           <li>Create a new repository as public and check the optional "Add README" so that we start with one file as an indicator</li>
           <li>Press green Code button then copy the URL (http as default)</li>
           <li>...GithubPages % <code>git clone https://github.com/fcoder/superninja.git</code>, this creates a superninjia directory</li>
@@ -40,5 +40,24 @@
             </li>
         </ul>
     </p>
+    <hr>
+    <h2>Create a Local Repo then Push to GitHub</h2>
+    <p><pre>
+        logon to github, create a new repository for receving new code from local system. Do not check README, that will
+        require a pull first!   Let's say the URL for the new repo is  https://github.com/aphexes/csscheatsheet.git
+
+        cd to the root of local new repo
+        git init                  To initialize git for current app, will create a .git directory
+        ls -a                     Check if .git has been created, which contain all the git programs and data
+        git status                git should detect our local directories and code as untracked
+        git add .                 Add current code for git to start manage
+        git status                git should show our local app files in green color, ready to be committed
+        got commit -m "css tutorial initial commit"   Commit the local app to local git for version control
+        git remote add origin https://github.com/aphexes/csscheatsheet.git   Connect local git with remote github repo as "origin"
+        git remote -v             To check if the newly added origin does point to the correct github repo
+        git branch                Check branch name of local repo
+        git branch -M main        If the default branch name is master, rename it to main for political correctness. Need to do this only once
+        git push -u origin main   To push local "main" repo upstream to github repo "origin" 
+    </pre></p>
 </body>
 </html>
